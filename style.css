@@ -13,6 +13,11 @@ h1{
     margin-right: 31%;
 
 }
+.audio{
+    position: relative;
+    padding-bottom: 20px;
+    
+}
 .wrapper{
     display: flex;
 }
@@ -50,7 +55,28 @@ h1{
     background-color: rgb(104, 102, 252);
     border-radius: 50%;
     display: inline-block;
+    animation-name: backgroundColorPalette;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
  }
+ @keyframes backgroundColorPalette {
+    0% {
+      background: #ee6055;
+    }
+    25% {
+      background: #60d394;
+    }
+    50% {
+      background: #aaf683;
+    }
+    75% {
+      background: #ffd97d;
+    }
+    100% {
+      background: #ff9b85;
+    }
+  }
 .navbar-nav{
     margin-left: -110px;
     margin-top: 30px;
@@ -95,9 +121,28 @@ h1{
 .btn:hover{
     background-color: rgba(8, 8, 202, 0.479);
 }
+.monkey{
+    animation-name: monkeys;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    transform: rotate(10deg);
+    margin-left: 110px;
+    margin-top: -55px;
+    z-index: -2;
 
+}
+@keyframes monkeys {
+    from {margin-top: 15px;}
+    to {margin-top: -55px;}
+  }
 @media (max-width: 768px){
 .sidebar{
    display: none;
-  
-}}
+    }
+.monkey{
+    display: none;
+    }
+}
